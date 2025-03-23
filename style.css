@@ -1,20 +1,29 @@
+:root{
+  --color: #16213E;
+  --seccolor: #1A1A2E;
+  --tertcolor: #E94560;
+  --hover: 2px 2px 40px var(--seccolor);
+}
+
 *{
   margin: 0;
   padding: 0;
 }
 
 body{
-  background-color: #16213E;
+  background-color: var(--color);
   color: white;
   font-family: "Poppins", sans-serif;
 }
 
 nav{
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 80px;
-  background-color: #1A1A2E;
+  background-color: var(--seccolor);
 }
 
 nav ul{
@@ -46,13 +55,22 @@ nav ul{
   font-weight: 600;
 }
 
+.leftsection:hover{
+  box-shadow: var(--hover);
+}
+
 .rightsection img{
   margin: 30px 0px;
   padding: 20px 0px;
 }
 
+.rightsection img:hover{
+  box-shadow: var(--hover);
+}
+
 .name{
-  color: #E94560;
+  color: var(--tertcolor);
+  text-shadow: 2px 2px 4px crimson;
 }
 
 nav ul a{
@@ -66,7 +84,7 @@ nav ul a:hover{
 }
 
 #element{
-  color: #E94560;
+  color: var(--tertcolor);
 }
 
 .second{
@@ -76,6 +94,10 @@ nav ul a:hover{
   height: 500px;
 }
 
+.second:hover{
+  box-shadow: var(--hover);
+}
+
 hr{
   border: 0;
   background: #9c97f1;
@@ -83,8 +105,8 @@ hr{
   margin: 60px 80px;
 }
 
-.color-gray{
-  color: gray;
+.color-gray , .vertical-desc{
+  color: #7DA0CA;
 }
 
 .second .box{
@@ -115,7 +137,6 @@ hr{
   top: 75px;
   width: 120px;
   font-size: 9px;
-  color: gray;
 }
 
 .image{
@@ -123,4 +144,46 @@ hr{
   position: relative;
   top: -30px;
   left: -9px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  height: 70px;
+  background-color:var(--seccolor);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+footer a {
+  color: #E0E0E0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .copyright {
+  font-size: 14px;
 }
